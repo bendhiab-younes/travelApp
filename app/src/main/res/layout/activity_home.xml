@@ -21,4 +21,6 @@
         android:backgroundTint="#03DAC5"
         android:text="Explore Destinations"
         android:textColor="#FFFFFF" />
+
+    <include layout="@layout/bottom_navigation" />
 </RelativeLayout>

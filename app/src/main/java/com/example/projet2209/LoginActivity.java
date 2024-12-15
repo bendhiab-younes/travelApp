@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 new android.os.Handler().postDelayed(() -> {
                     progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.putExtra("username", username.getText().toString());
                     startActivity(intent);
                     finish();
                 }, 2000);
