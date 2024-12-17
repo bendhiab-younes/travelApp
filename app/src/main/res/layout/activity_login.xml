@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="@drawable/login_background">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,9 +15,8 @@
         android:layout_marginTop="164dp"
         android:layout_marginEnd="86dp"
         android:layout_marginBottom="290dp"
-        android:background="#F5F5F5"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <EditText
             android:id="@+id/etUsername"
@@ -26,7 +25,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_input"
             android:hint="Username"
-            android:padding="15dp" />
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -36,7 +35,7 @@
             android:background="@drawable/rounded_input"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="15dp" />
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/btnLogin"
@@ -44,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:backgroundTint="#03DAC5"
-            android:padding="10dp"
+            android:padding="20dp"
             android:text="Login"
             android:textColor="#FFFFFF" />
 

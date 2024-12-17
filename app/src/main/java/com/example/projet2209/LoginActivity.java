@@ -26,15 +26,22 @@ public class LoginActivity extends AppCompatActivity {
 
         findViewById(R.id.btnLogin).setOnClickListener(view -> {
             hideKeyboard();
-            if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
+            String usernameInput = username.getText().toString().trim();
+            String passwordInput = password.getText().toString().trim();
+
+            if (usernameInput.isEmpty() || passwordInput.isEmpty()) {
                 Toast.makeText(LoginActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            } else if (usernameInput.length() < 4) {
+                Toast.makeText(LoginActivity.this, "Username must be at least 4 characters", Toast.LENGTH_SHORT).show();
+            } else if (passwordInput.length() < 4) {
+                Toast.makeText(LoginActivity.this, "Password must be at least 4 characters", Toast.LENGTH_SHORT).show();
             } else {
                 progressBar.setVisibility(View.VISIBLE);
                 // Simulate login process
                 new android.os.Handler().postDelayed(() -> {
                     progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    intent.putExtra("username", username.getText().toString());
+                    intent.putExtra("username", usernameInput);
                     startActivity(intent);
                     finish();
                 }, 2000);
